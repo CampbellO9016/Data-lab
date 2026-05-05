@@ -17,6 +17,9 @@ public class Sale {
         this.revenue = revenue;
     }
 
+    public static double calculateRevenue(Shoe sh, int unit){
+        return sh.getPrice() * unit;
+    }
     public String getSaleID() {
         return saleID;
     }

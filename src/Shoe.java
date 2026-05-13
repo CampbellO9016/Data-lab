@@ -42,4 +42,9 @@ public class Shoe {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {//String color, String shoeType, String brand, double price)
+        return "Shoe brand: " + brand +"\nShoe Type: " + shoeType + "\nShoe Color: " + color + "\nPrice per unit: " + price;
+    }
 }

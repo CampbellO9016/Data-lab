@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Sale {
     private String saleID;
     private String date;
@@ -19,6 +21,25 @@ public class Sale {
 
     public static double calculateRevenue(Shoe sh, int unit){
         return sh.getPrice() * unit;
+    }
+    public static double calculateTotalRevenue(ArrayList<Sale> sal){
+        double sum = 0.0;
+        for(Sale s:sal){
+            sum += s.getRevenue();
+        }
+        return sum;
+    }
+    public static double calculateAveragePrice(ArrayList<Sale> sal){
+        return calculateTotalRevenue(sal) / sal.size();
+    }
+    public static double calculateTotalRevenueDate(ArrayList<Sale> sal, String dat){
+        double sumd = 0;
+        for(Sale s:sal){
+            if(s.getDate().equals(dat)){
+                sumd += s.getRevenue();
+            }
+        }
+        return sumd;
     }
     public String getSaleID() {
         return saleID;
@@ -74,5 +95,11 @@ public class Sale {
 
     public void setShoe(Shoe shoe) {
         this.shoe = shoe;
+    }
+
+    @Override
+    public String toString() {//Shoe s, String saleID, String date, String country,
+        // String sales_channel, int units_sold, double revenue)
+        return "Sale ID: " +saleID + "\n" + shoe + " \nUnits sold: " + units_sold + "\nDate: " + date +"\nSale: "+ sales_channel +"\nCountry: "+ country + "\nTotal revenue: " +revenue;
     }
 }

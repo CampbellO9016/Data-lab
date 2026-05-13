@@ -11,6 +11,11 @@ The main code of this is very user-friendly, it gives you a way to make a shoe a
 - This adds each of the revenue from the shoe sales and calculates the total revenue.
 ##### Calculates total revenue on a certain day
 - This takes a date and finds all the sales on that day and calculates the total.
-##### Get sale by ID number
+#### Calculate average price of shoe
+- This calculates the average price of a shoe in the list.
+#### Get sale by ID number
 - This takes an ID number and searches the list of sales to find it and returns the sale.
-##### More to be added...
+#### Make a new shoe
+- Allows you to create a new shoe.
+#### Make a new sale
+- Allows you to create a new sale and shoe.
